@@ -18,9 +18,7 @@ const Navbar = () => {
           <img src={pic2} alt=""/>
           <div className="navbar-search-icon">
             <img src={pic3} alt=""/>
-            <div className="dot">
-                HII lavdaneesh
-            </div>
+            <div className="dot"></div>
           </div>
           <button>sign in</button>
        </div>
