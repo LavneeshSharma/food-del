@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import pic from "../../assets/admin_assets/logo.png";
+import pic from "../../assets/admin_assets/logo2.png";
 import pic2 from "../../assets/frontend_assets/search_icon.png";
 import pic3 from "../../assets/frontend_assets/basket_icon.png";
 import "./Navbar.css"
