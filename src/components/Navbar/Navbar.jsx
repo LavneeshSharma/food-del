@@ -4,7 +4,7 @@ import pic2 from "../../assets/frontend_assets/search_icon.png";
 import pic3 from "../../assets/frontend_assets/basket_icon.png";
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
     const [menu,setMenu]=useState("home");
   return (
     <div className='navbar'>
@@ -21,7 +21,7 @@ const Navbar = () => {
             <img src={pic3} alt=""/>
             <div className="dot"></div>
           </div>
-          <button>sign in</button>
+          <button onClick={()=>setShowLogin(true)}>sign in</button>
        </div>
     </div>
   )
