@@ -28,13 +28,13 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
                 <li>+1-212-456-7890</li>
-                <li>contact@flavorheaven.com</li>
+                <li>contact@flavorhaven.com</li>
             </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 © FlavorHeaven.com -All Right Reserved
+        Copyright 2024 © FlavorHaven.com -All Right Reserved
       </p>
     </div>
   )
