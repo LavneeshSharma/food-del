@@ -12,7 +12,7 @@ const port=3000
 app.use(express.json());
 app.use(cors());
 app.use("/api/user",userRouter)
-app.use("api/cart",cartRouter)
+app.use("/api/cart",cartRouter)
 connectdb();
 
 app.use("/api/food",foodRouter)

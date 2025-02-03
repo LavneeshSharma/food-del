@@ -1,7 +1,9 @@
+# Food Delivery Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Structure
+- `/frontend`: Contains the React-based frontend code.
+- `/frontend/backend`: Contains the Express-based backend code.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why Combined?
+- For simplicity in local development and showcasing the project.
+- The backend and frontend are fully functional, and the structure can be refactored if needed.
