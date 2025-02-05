@@ -3,7 +3,7 @@ import axios from "axios"
 export const StoreContext=createContext(null)
 const StoreContextProvider=(props)=>{
     const [cartItems,setCartItems]=useState({});
-    const url="http://localhost:3000";
+    const url=import.meta.env.vite_URL;
     const [token,setToken]=useState("");
     const[food_list,setFoodlist]=useState([])
     const addToCart= async (itemId)=>{
