@@ -1,17 +1,18 @@
 import React from 'react'
 import "./Footer.css"
-import { assets } from '../../../assets/frontend_assets/assets'
-import logo from "../../../assets/frontend_assets/assets.js";
+import { assets } from '../../../assets/frontend_assets/assets.js'
+import {twitter_icon,logo} from "../../../assets/frontend_assets/assets.js";
+// import logo from "../../../assets/frontend_assets/assets.js";
 const Footer = () => {
   return (
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={pic} alt=""/>
+            <img src={logo} alt=""/>
             <p>We are dedicated to providing the best services and solutions to our clients. Our mission is to deliver excellence and foster innovation.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt=''/>
-                <img src={assets.twitter_icon} alt=''/>
+                <img src={twitter_icon} alt=''/>
                 <img src={assets.linkedin_icon} alt=''/>
             </div>
         </div>

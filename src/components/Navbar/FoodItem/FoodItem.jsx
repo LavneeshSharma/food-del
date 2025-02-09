@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './FoodItem.css'
-import { assets } from '../../../assets/frontend_assets/assets'
+
+import { assets,remove_icon_red,rating_starts} from '../../../assets/frontend_assets/assets'
 import { StoreContext } from '../../../Context/StoreContext';
 const FoodItem = ({id,name,price,description,image}) => {
     
@@ -12,7 +13,7 @@ const FoodItem = ({id,name,price,description,image}) => {
          {!cartItems[id]
          ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white}alt=''/>:
            <div className="food-item-counter">
-              <img onClick={()=>removefromCart(id)} src={assets.remove_icon_red} alt=''/>
+              <img onClick={()=>removefromCart(id)} src={remove_icon_red} alt=''/>
               <p>{cartItems[id]}</p>
               <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt=''/>
             </div>
@@ -21,7 +22,7 @@ const FoodItem = ({id,name,price,description,image}) => {
        <div className="food-item-info">
          <div className="food-item-name-rating">
             <p>{name}</p>
-            <img src={assets.rating_starts} alt=""/>
+            <img src={rating_starts} alt=""/>
          </div>
          <p className="food-item-desc">{description}</p>
          <p className="food-item-price">${price}</p>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
-import pic from "../../assets/admin_assets/logo2.png";
-import pic2 from "../../assets/frontend_assets/search_icon.png";
-import pic3 from "../../assets/frontend_assets/basket_icon.png";
+import {search_icon} from "../../assets/frontend_assets/assets.js";
+import {profile_icon} from "../../assets/frontend_assets/assets.js";
+// import basket_icon from "../../assets/frontend_assets/assets.js";
 import {Link,useNavigate} from 'react-router-dom'
 import "./Navbar.css"
 import { assets, logo } from '../../assets/frontend_assets/assets';
@@ -25,15 +25,15 @@ const Navbar = ({setShowLogin}) => {
          <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==='contact-us'?"active":""}>contact us</a>
        </ul>
        <div className="navbar-right">
-          <img src={pic2} alt=""/>
+          <img src={search_icon} alt=""/>
           <div className="navbar-search-icon">
-            <Link to='/cart'><img src={pic3} alt=""/></Link>
+            <Link to='/cart'><img src={assets.basket_icon} alt=""/></Link>
             <div className={getTotalCartAmount()===0?"":"dot"}></div>
           </div>
           {!token?<button onClick={()=>setShowLogin(true)}>sign in</button>
           :
           <div className='navbar-profile'>
-               <img src={assets.profile_icon} alt=''/>
+               <img src={profile_icon} alt=''/>
                <ul className="navbar-profile-dropdown">
                    <li><img src={assets.bag_icon} alt=''/>
                      <p>Orders</p>
