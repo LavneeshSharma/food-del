@@ -1,17 +1,16 @@
-import logo from './logo.png'
-import add_icon from './add_icon.png'
-import order_icon from './order_icon.png'
 import profile_image from './profile_image.png'
 import upload_area from './upload_area.png'
-import parcel_icon from './parcel_icon.png'
+
 
 export const assets ={
-    logo,
-    add_icon,
-    order_icon,
+   
     profile_image,
     upload_area,
-    parcel_icon
+    
 }
-
-export const url = 'http://localhost:4000'
+const add_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739041349/add_icon_onzoby.png"
+const logo="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739041349/logo2_quxiyf.png"
+const parcel_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739041349/parcel_icon_jz6j5u.png"
+const order_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739041349/order_icon_kgssgh.png"
+export{logo,add_icon,parcel_icon,order_icon}
+export const url = 'http://localhost:3000'

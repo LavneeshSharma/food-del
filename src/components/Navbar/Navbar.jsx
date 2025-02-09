@@ -4,7 +4,7 @@ import pic2 from "../../assets/frontend_assets/search_icon.png";
 import pic3 from "../../assets/frontend_assets/basket_icon.png";
 import {Link,useNavigate} from 'react-router-dom'
 import "./Navbar.css"
-import { assets } from '../../assets/frontend_assets/assets';
+import { assets, logo } from '../../assets/frontend_assets/assets';
 import { StoreContext } from '../../Context/StoreContext';
 const Navbar = ({setShowLogin}) => {
     const [menu,setMenu]=useState("home");
@@ -17,7 +17,7 @@ const Navbar = ({setShowLogin}) => {
     }
   return (
     <div className='navbar'>
-       <Link to='/'><img src={pic} alt="" className='logo'/></Link>
+       <Link to='/'><img src={logo} alt="" className='logo'/></Link>
        <ul className="navbar-menu">
          <Link to='/' onClick={()=>setMenu("home")} className={menu==='home'?"active":""}>home</Link>
          <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==='menu'?"active":""}>menu</a>

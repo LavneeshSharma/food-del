@@ -4,7 +4,7 @@ import './Placeorder.css'
 import { StoreContext } from '../../../Context/StoreContext'
 const Placeorder = () => {
   const {getTotalCartAmount,token,food_list,cartItems,url}=useContext(StoreContext)
-
+  
   const [data,setData]=useState({
     firstName:"",
     lastName:"",
@@ -34,7 +34,6 @@ const Placeorder = () => {
   
   const placeOrder = async (e) => {
     e.preventDefault();
-  
     let orderItems = [];
     food_list.forEach((item) => {
       if (cartItems[item._id] > 0) {
@@ -46,7 +45,7 @@ const Placeorder = () => {
     let orderData = {
       address: data,
       items: orderItems,
-      amount: getTotalCartAmount() + 2, // Include delivery fee
+      amount: getTotalCartAmount() + 2, 
     };
   
     try {
@@ -56,17 +55,13 @@ const Placeorder = () => {
   
       if (response.data.success) {
         const { razorpayOrderId, amount, currency } = response.data;
-  
-        // ✅ Ensure Razorpay is loaded before initializing
         const isLoaded = await loadRazorpayScript();
         if (!isLoaded) {
           alert("Failed to load Razorpay. Try again.");
           return;
         }
-  
-        // ✅ Initialize Razorpay checkout
-        const options = {
-          key: import.meta.env.VITE_RAZORPAY_KEY_ID, // Ensure correct .env variable
+          const options = {
+          key: import.meta.env.VITE_RAZORPAY_KEY_ID, 
           amount: amount,
           currency: currency,
           name: "Your Store Name",
@@ -96,8 +91,6 @@ const Placeorder = () => {
       alert("Something went wrong.");
     }
   };
-  
-  
   return (
     <form onSubmit={placeOrder} className="place-order">
         <div className="place-order-left">
