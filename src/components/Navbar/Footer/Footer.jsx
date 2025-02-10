@@ -1,8 +1,7 @@
 import React from 'react'
 import "./Footer.css"
-import { assets } from '../../../assets/frontend_assets/assets.js'
-import {twitter_icon,logo} from "../../../assets/frontend_assets/assets.js";
-// import logo from "../../../assets/frontend_assets/assets.js";
+import {twitter_icon,logo,facebook_icon,linkedin_icon} from "../../../assets/frontend_assets/assets.js";
+
 const Footer = () => {
   return (
     <div className='footer' id='footer'>
@@ -11,9 +10,9 @@ const Footer = () => {
             <img src={logo} alt=""/>
             <p>We are dedicated to providing the best services and solutions to our clients. Our mission is to deliver excellence and foster innovation.</p>
             <div className="footer-social-icons">
-                <img src={assets.facebook_icon} alt=''/>
+                <img src={facebook_icon} alt=''/>
                 <img src={twitter_icon} alt=''/>
-                <img src={assets.linkedin_icon} alt=''/>
+                <img src={linkedin_icon} alt=''/>
             </div>
         </div>
         <div className="footer-content-center">

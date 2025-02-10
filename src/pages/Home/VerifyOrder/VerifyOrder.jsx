@@ -5,7 +5,7 @@ const VerifyOrder = () => {
   const [searchParams] = useSearchParams();
   const success = searchParams.get("success");
   const orderId = searchParams.get("orderId");
-
+  
   useEffect(() => {
     if (success === "true") {
       console.log(`Payment Successful for Order ID: ${orderId}`);

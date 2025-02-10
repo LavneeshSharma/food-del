@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './FoodItem.css'
 
-import { assets,remove_icon_red,rating_starts} from '../../../assets/frontend_assets/assets'
+import {remove_icon_red,rating_starts,add_icon_green,add_icon_white} from '../../../assets/frontend_assets/assets'
 import { StoreContext } from '../../../Context/StoreContext';
 const FoodItem = ({id,name,price,description,image}) => {
     
@@ -11,11 +11,11 @@ const FoodItem = ({id,name,price,description,image}) => {
        <div className="food-item-img-container">
          <img src={url+"/images/"+image} alt="" className="food-item-img" />
          {!cartItems[id]
-         ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white}alt=''/>:
+         ?<img className='add' onClick={()=>addToCart(id)} src={add_icon_white}alt=''/>:
            <div className="food-item-counter">
               <img onClick={()=>removefromCart(id)} src={remove_icon_red} alt=''/>
               <p>{cartItems[id]}</p>
-              <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt=''/>
+              <img onClick={()=>addToCart(id)} src={add_icon_green} alt=''/>
             </div>
             }
        </div>

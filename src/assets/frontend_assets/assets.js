@@ -1,23 +1,3 @@
-import basket_icon from "./basket_icon.png";
-import add_icon_white from "./add_icon_white.png";
-import add_icon_green from "./add_icon_green.png";
-import app_store from "./app_store.png";
-import linkedin_icon from "./linkedin_icon.png";
-import facebook_icon from "./facebook_icon.png";
-import cross_icon from "./cross_icon.png";
-import bag_icon from "./bag_icon.png";
-import logout_icon from "./logout_icon.png";
-export const assets = {
-  basket_icon,
-  add_icon_green,
-  add_icon_white,
-  app_store,
-  linkedin_icon,
-  facebook_icon,
-  cross_icon,
-  logout_icon,
-  bag_icon,
-};
 const logo =
   "https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739041349/logo2_quxiyf.png";
 const food_1 =
@@ -116,6 +96,15 @@ const selector_icon =
   "https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739044881/selector_icon_wprxuy.png";
 const twitter_icon =
   "https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739044881/twitter_icon_z5ep4j.png";
+const facebook_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109271/facebook_icon_an3r6v.png"
+const logout_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109272/logout_icon_e0jrzo.png"
+const cross_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109271/cross_icon_wqzqgk.png"
+const linkedin_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109271/linkedin_icon_lagg5o.png"
+const basket_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109271/basket_icon_w4n63s.png"
+const bag_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739109271/bag_icon_gdoxty.png"
+const add_icon_white="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739110302/add_icon_white_p5pt8t.png"
+const add_icon_green="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739110302/add_icon_green_d4wwdh.png"
+const app_store="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739110303/app_store_iu9gom.png"
 export const menu_list = [
   {
     menu_name: "Salad",
@@ -491,4 +480,13 @@ export {
   search_icon,
   selector_icon,
   twitter_icon,
+  linkedin_icon,
+  facebook_icon,
+  cross_icon,
+  logout_icon,
+  bag_icon,
+  basket_icon,
+  add_icon_green,
+  add_icon_white,
+  app_store
 };

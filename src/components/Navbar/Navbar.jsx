@@ -1,11 +1,8 @@
 import React, { useContext, useState } from 'react'
-import {search_icon} from "../../assets/frontend_assets/assets.js";
-import {profile_icon} from "../../assets/frontend_assets/assets.js";
-// import basket_icon from "../../assets/frontend_assets/assets.js";
 import {Link,useNavigate} from 'react-router-dom'
 import "./Navbar.css"
-import { assets, logo } from '../../assets/frontend_assets/assets';
-import { StoreContext } from '../../Context/StoreContext';
+import {logout_icon,logo,bag_icon,basket_icon,search_icon,profile_icon} from '../../assets/frontend_assets/assets';
+import {StoreContext} from '../../Context/StoreContext';
 const Navbar = ({setShowLogin}) => {
     const [menu,setMenu]=useState("home");
     const {getTotalCartAmount,token,setToken}=useContext(StoreContext)
@@ -27,7 +24,7 @@ const Navbar = ({setShowLogin}) => {
        <div className="navbar-right">
           <img src={search_icon} alt=""/>
           <div className="navbar-search-icon">
-            <Link to='/cart'><img src={assets.basket_icon} alt=""/></Link>
+            <Link to='/cart'><img src={basket_icon} alt=""/></Link>
             <div className={getTotalCartAmount()===0?"":"dot"}></div>
           </div>
           {!token?<button onClick={()=>setShowLogin(true)}>sign in</button>
@@ -35,17 +32,16 @@ const Navbar = ({setShowLogin}) => {
           <div className='navbar-profile'>
                <img src={profile_icon} alt=''/>
                <ul className="navbar-profile-dropdown">
-                   <li><img src={assets.bag_icon} alt=''/>
+                   <li><img src={bag_icon} alt=''/>
                      <p>Orders</p>
                    </li>
                    <hr />
-                   <li onClick={logout}><img src={assets.logout_icon} alt=''/>
+                   <li onClick={logout}><img src={logout_icon} alt=''/>
                      <p>Logout</p>
                    </li>
                </ul>
           </div>
             }
-          
        </div>
     </div>
   )
