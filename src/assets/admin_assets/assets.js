@@ -5,4 +5,3 @@ const order_icon="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739
 const upload_area="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739110954/upload_area_sutyqe.png"
 const profile_image="https://res.cloudinary.com/dlyjke9l9/image/upload/f_auto/v1739110954/profile_image_gv6skj.png"
 export{logo,add_icon,parcel_icon,order_icon,upload_area,profile_image}
-export const url = 'http://localhost:3000'

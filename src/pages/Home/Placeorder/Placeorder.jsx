@@ -43,16 +43,15 @@ const Placeorder = () => {
     });
   
     let orderData = {
+      userId: token,
       address: data,
       items: orderItems,
       amount: getTotalCartAmount() + 2, 
     };
-  
+    let response = await axios.post(url + "/api/order/place", orderData, {
+      headers: { token },
+    });
     try {
-      let response = await axios.post(url + "/api/order/place", orderData, {
-        headers: { token },
-      });
-  
       if (response.data.success) {
         const { razorpayOrderId, amount, currency } = response.data;
         const isLoaded = await loadRazorpayScript();
@@ -68,8 +67,13 @@ const Placeorder = () => {
           description: "Order Payment",
           order_id: razorpayOrderId,
           handler: function (response) {
-            alert("Payment Successful!");
-            window.location.href = `/verify?success=true&orderId=${razorpayOrderId}`;
+            if (response.razorpay_payment_id) {
+              alert("Payment Successful!");
+              console.log("razorpayid: ", response.razorpay_payment_id);
+              window.location.href = `/verify?success=true&orderId=${razorpayOrderId}`;
+            } else {
+              alert("Payment failed! Try again.");
+            }
           },
           prefill: {
             name: `${data.firstName} ${data.lastName}`,
